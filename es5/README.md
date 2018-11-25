@@ -108,6 +108,30 @@ Not (:not())
 Before (::before)
 After (::after)
 ```
+## Functions
+```
+DOMLoaded()
+windowLoaded()
+$one()
+$all()
+show()
+hide()
+addCass()
+removeClass()
+hasClass()
+toggleClass()
+css()
+remove()
+ready()
+click()
+attr()
+removeAttr()
+html()
+text()
+prop()
+val()
+submit()
+```
 ## API
 
 querySelector: similar to Document.querySelector()

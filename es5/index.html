@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Query Selector Alternative</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style type="text/css">
+      .btn2, .btn2:hover, .btn2:active, .btn2:focus, .btn2:visited {
+        background-color: #000;
+        border: 1px solid #000;
+        color: #fff;
+        box-shadow: none;
+        background-image: none;
+      }
+    </style>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    
+    <div class="container">
+        <h1>H1 > Hello, world!</h1>
+        <h3>H3 > Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, voluptas!</h3>
+        <p class="first">p class > first</p>
+        <p class="second">p class > second</p>
+        <p id="one" class="ids">p id > one</p>
+        <p id="two" class="ids">p id > two</p>
+
+        <!--<a class="btn">Click To Toggle Class</a>-->
+        <button class="btn">Click To Toggle Class</button>
+
+        <div style="width: 400px; height: 200px; overflow: hidden;">
+          <p>Large image to just see how dom loaded plays out...</p>
+          <img src="http://lorempixel.com/1200/1200/sports/">
+        </div> 
+    </div>
+
+    
+    
+    <script src="dist/app.js"></script>
+    <script>
+      
+      // select one
+      
+      $one('p').style.backgroundColor="#ccc";
+
+      addClass( $one('.second') , 'newClassAdded');
+      
+        // selectAll
+        //$All("p,h1,h2,h3").each(function() {
+        $all("p").each(function() {
+          // this.style.backgroundColor="#ccc";
+          // hide(this);
+        });
+
+        // $one('.btn').addEventListener('click', function() {
+        //   toggleClass(this,'btn2');
+        // }, false);
+
+        $one('.btn').onclick = function(event){
+          toggleClass(this,'btn2');
+          event.preventDefault();
+        };
+
+        function DOMLoaded(){
+          console.log('DOM Loaded');
+          //hide( $One('p') );
+        }
+
+        function windowLoaded(){
+          console.log('window Loaded');
+        }
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Query Selector Alternative</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    
+    <div class="container">
+        <h1>H1 > Hello, world!</h1>
+        <h3>H3 > Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, voluptas!</h3>
+        <p class="first">p class > first</p>
+        <p class="second">p class > second</p>
+        <p id="one" class="ids">p id > one</p>
+        <p id="two" class="ids">p id > two</p>
+
+        <div style="width: 400px; height: 200px; overflow: hidden;">
+          <p>Large image to just see how window load plays out...</p>
+          <img src="http://lorempixel.com/1200/1200/sports/">
+        </div>
+
+    </div>
+
+    <script src="dist/jQ.min.js"></script>
+    <script>
+      
+      // select one
+      
+      jQ('p').addClass('dqdqw');
+      jQ('#two').hide();
+
+      jQ(document).ready(function() {
+        console.log('dom loaded');
+      });
+
+      function windowLoaded(){
+        console.log('Window Loaded');
+      }
+
+    </script>
+  </body>
+</html>

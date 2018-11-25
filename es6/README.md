@@ -99,10 +99,6 @@ $.ajax(options)
 $.param(obj) # Return URLEncoded query string
 $.clone(obj) # Clone an object
 ```
-
-## LICENSE
-MIT
-
 ## Notes
 
 Work in progress ... 

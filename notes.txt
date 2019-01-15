@@ -1,0 +1,7 @@
+jQuery Alternatives
+===================
+http://youmightnotneedjquery.com/#contains_selector
+https://gist.github.com/joyrexus/7307312
+https://blog.garstasio.com/you-dont-need-jquery/selectors/
+https://www.sitepoint.com/jquery-vs-raw-javascript-1-dom-forms/
+
